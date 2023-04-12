@@ -7,6 +7,7 @@ import glob
 import numpy as np
 import sys # grab command-line arguments
 
+
 def generateImage(length, width, height):
     letter_set = [chr(ascii_val) for ascii_val in range(ord('A'), ord('Z') + 1)]
     number_set = [chr(ascii_val) for ascii_val in range(ord('0'), ord('9') + 1)]
@@ -16,6 +17,7 @@ def generateImage(length, width, height):
     image = ImageCaptcha(width, height)
     captcha = image.generate_image(label)
     return (captcha, label)
+
 
 if not os.path.exists("data"):
     os.mkdir("data")

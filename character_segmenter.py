@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import math
 
+
 class CharacterSegmenter():
     def find_nonzero_intervals(vec):
         zero_elements = (vec == 0) * 1 # mark zero-elements as 1 and non-zero elements as 0

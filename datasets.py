@@ -10,6 +10,7 @@ import torchvision.transforms as transforms
 from noise_remover import NoiseRemover
 from character_segmenter import CharacterSegmenter
 
+
 class CharactersDataset(torch.utils.data.Dataset):
     def __init__(self, data_root, validate = False):
         super(CharactersDataset, self).__init__()
@@ -55,6 +56,7 @@ class CharactersDataset(torch.utils.data.Dataset):
 
     def __len__(self):
         return len(self.image_list)
+
 
 class CAPTCHADataset(torch.utils.data.Dataset):
     def __init__(self, data_root, img_format = "{}.jpg", size = -1):
